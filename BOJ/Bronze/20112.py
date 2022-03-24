@@ -1,6 +1,5 @@
 n = int(input())
 arr = [input() for _ in range(n)]
-flag = True
 for i in range(n):
     s1 = arr[i]
     s2 = ''

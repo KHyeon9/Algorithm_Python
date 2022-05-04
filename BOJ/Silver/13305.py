@@ -6,4 +6,5 @@ for i in range(n):
     if tip < 0:
         tip = 0
     total_tip += tip
+    
 print(total_tip)

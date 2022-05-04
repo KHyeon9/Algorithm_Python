@@ -1,12 +1,9 @@
-from sys import stdin
-
-n = int(stdin.readline())
-distance = list(map(int, stdin.readline().split()))
-cost = list(map(int, stdin.readline().split()))[:-1]
-min_cost = 1e9
-result = 0
-for i in range(n - 1):
-    min_cost = min(min_cost, cost[i])
-    result += min_cost * distance[i]
-
-print(result)
+n = int(input())
+tips = sorted([int(input()) for _ in range(n)], reverse=True)
+total_tip = 0
+for i in range(n):
+    tip = tips[i] - i
+    if tip < 0:
+        tip = 0
+    total_tip += tip
+print(total_tip)

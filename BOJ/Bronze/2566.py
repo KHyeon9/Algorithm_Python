@@ -1,15 +1,11 @@
-r1 = 0
-
+res = -1
+x, y = 0, 0
 for i in range(9):
-    n = list(map(int, input().split()))
-
-    if max(n) > r1:
-        r1 = max(n)
+    nums = list(map(int, input().split()))
+    max_nums = max(nums)
+    if res < max_nums:
         x = i + 1
-
-        for j in range(9):
-            if r1 == n[j]:
-                y = j + 1
-
-print(r1)
+        y = nums.index(max_nums) + 1
+        res = max_nums
+print(res)
 print(x, y)

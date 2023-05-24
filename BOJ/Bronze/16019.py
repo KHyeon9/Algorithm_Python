@@ -1,10 +1,11 @@
-a = int(input())
-b = int(input())
-c = int(input())
-d = int(input())
+d = [0] + list(map(int, input().split()))
+for i in range(1, 5):
+    d[i] = d[i] + d[i - 1]
 
-if 8 <= a <= 9 and 8 <= d <= 9 and b == c:
-    print("ignore")
+for i in range(5):
+    res = []
+    for j in range(5):
+        res.append(abs(d[i] - d[j]))
+    print(*res)
 
-else:
-    print("answer")
+

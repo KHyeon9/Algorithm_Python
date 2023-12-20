@@ -1,8 +1,15 @@
-for i in range(int(input())):
-    h, m = map(int, input().split())
-    total = h * 60 + m - 45
+t = int(input())
+for _ in range(t):
+    group = list(map(int, input().split()))
+    n = group[0]
+    group = group[1:]
+    num = group[0]
+    res = -1
 
-    if total < 0:
-        total += 24 * 60
+    for i in range(n):
+        if num != group[i]:
+            res = i + 1
+            break
+        num += 1
 
-    print(f"Case #{i + 1}: {total // 60} {total % 60}")
+    print(res)

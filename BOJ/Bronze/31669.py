@@ -1,0 +1,14 @@
+n, m = map(int, input().split())
+arr = [input() for _ in range(n)]
+res = -1
+
+for i in range(m):
+    flag = True
+    for j in range(n):
+        if arr[j][i] == "O":
+            flag = False
+    if flag:
+        res = i + 1
+        break
+
+print(res if res != -1 else "ESCAPE FAILED")

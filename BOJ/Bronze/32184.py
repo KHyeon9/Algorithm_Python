@@ -1,8 +1,3 @@
-from sys import stdin
+a, b = map(int, input().split())
 
-total = 0
-
-for _ in range(int(stdin.readline())):
-    a, b = map(int, stdin.readline().split())
-    total = a - b + total
-    print(total)
+print((b + 1) // 2 - (a + 1) // 2 + 1)

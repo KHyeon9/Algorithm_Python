@@ -1,0 +1,5 @@
+a, b = map(int, input().split())
+c, d = map(int, input().split())
+t = int(input())
+res = t - abs(a - c) - abs(b - d)
+print("Y" if res >= 0 and res % 2 == 0 else "N")
